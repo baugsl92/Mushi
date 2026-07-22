@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mushroom-watch-2"
+version = "2.0.0"
+description = "A transparent Streamlit weather-compatibility model for four mushroom ecological guilds."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "Mushroom Watch contributors"}]
+dependencies = [
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<3",
+  "PyYAML>=6.0,<7",
+  "requests>=2.32,<3",
+  "streamlit>=1.42,<2",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3,<10",
+  "pytest-cov>=5,<7",
+]
+
+[tool.setuptools]
+packages = ["mushroom_watch"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+filterwarnings = [
+  "error::FutureWarning:mushroom_watch.*",
+]
