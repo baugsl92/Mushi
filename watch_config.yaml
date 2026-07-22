@@ -1,0 +1,20 @@
+watches:
+  - name: Steuben County, Indiana
+    location:
+      mode: county
+      state: IN
+      county: Steuben
+    radius_miles: 20
+    sample_points: 9
+    guilds:
+      - morel
+      - ectomycorrhizal
+      - wood_decay
+      - soil_saprotroph
+    score_threshold: 68
+    minimum_area_fraction: 0.40
+    minimum_confidence: 0.45
+    forecast_days: 7
+    recharge_threshold_inches: 1.0
+    recharge_minimum_area_fraction: 0.35
+    cooldown_hours: 72
